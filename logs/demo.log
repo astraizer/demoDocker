@@ -1,12 +1,4 @@
-15:18:59.726 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - Starting DemoApplication using Java 18.0.1 on Kevins-MacBook-Pro.local with PID 68109 (/Users/kevin/Documents/Coding/Spring Boot/Nostra/demo/target/classes started by kevin in /Users/kevin/Documents/Coding/Spring Boot/Nostra/demo)
-15:18:59.727 [32m[main][0;39m [39mDEBUG[0;39m com.example.demo.DemoApplication - Running with Spring Boot v2.7.4, Spring v5.3.23
-15:18:59.728 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
-15:19:00.038 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-15:19:00.041 [32m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-15:19:00.041 [32m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
-15:19:00.042 [32m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
-15:19:00.072 [32m[main][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-15:19:00.072 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 323 ms
-15:19:00.178 [32m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-15:19:00.184 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-15:19:00.189 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - Started DemoApplication in 0.665 seconds (JVM running for 0.959)
+15:32:10.302 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - Starting DemoApplicationTests using Java 18.0.1 on Kevins-MacBook-Pro.local with PID 93792 (started by kevin in /Users/kevin/Documents/Coding/Spring Boot/Nostra/demo)
+15:32:10.304 [32m[main][0;39m [39mDEBUG[0;39m c.example.demo.DemoApplicationTests - Running with Spring Boot v2.7.4, Spring v5.3.23
+15:32:10.304 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+15:32:10.921 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - Started DemoApplicationTests in 0.959 seconds (JVM running for 1.395)

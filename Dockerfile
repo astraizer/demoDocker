@@ -1,4 +1,4 @@
 FROM openjdk:8
 EXPOSE 8080
-ADD target/demo-docker.jar demo-docker.jar
-ENTRYPOINT ["java","jar","/demo-docker.jar"]
+COPY target/demo-docker.jar .
+ENTRYPOINT java -jar -server -Xms4G -Xmx16G demo-docker.jar
