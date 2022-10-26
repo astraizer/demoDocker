@@ -1,4 +1,12 @@
-15:32:10.302 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - Starting DemoApplicationTests using Java 18.0.1 on Kevins-MacBook-Pro.local with PID 93792 (started by kevin in /Users/kevin/Documents/Coding/Spring Boot/Nostra/demo)
-15:32:10.304 [32m[main][0;39m [39mDEBUG[0;39m c.example.demo.DemoApplicationTests - Running with Spring Boot v2.7.4, Spring v5.3.23
-15:32:10.304 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
-15:32:10.921 [32m[main][0;39m [34mINFO [0;39m c.example.demo.DemoApplicationTests - Started DemoApplicationTests in 0.959 seconds (JVM running for 1.395)
+16:55:22.475 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - Starting DemoApplication using Java 18.0.1 on Kevins-MacBook-Pro.local with PID 99333 (/Users/kevin/Documents/Coding/Spring Boot/Nostra/demo/target/classes started by kevin in /Users/kevin/Documents/Coding/Spring Boot/Nostra/demo)
+16:55:22.477 [32m[main][0;39m [39mDEBUG[0;39m com.example.demo.DemoApplication - Running with Spring Boot v2.7.4, Spring v5.3.23
+16:55:22.477 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+16:55:22.889 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8001 (http)
+16:55:22.893 [32m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8001"]
+16:55:22.893 [32m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:55:22.893 [32m[main][0;39m [34mINFO [0;39m o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+16:55:22.935 [32m[main][0;39m [34mINFO [0;39m o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:55:22.935 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 422 ms
+16:55:23.061 [32m[main][0;39m [34mINFO [0;39m o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8001"]
+16:55:23.068 [32m[main][0;39m [34mINFO [0;39m o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8001 (http) with context path ''
+16:55:23.074 [32m[main][0;39m [34mINFO [0;39m com.example.demo.DemoApplication - Started DemoApplication in 0.935 seconds (JVM running for 1.277)

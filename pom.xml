@@ -37,7 +37,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>demo-docker</finalName>
     </build>
 
 </project>
