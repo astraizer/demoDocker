@@ -20,10 +20,10 @@ public class DbConfig {
     public DataSource dbDataSource() {
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+        dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://172.18.0.2:5432/nostra");
-        dataSource.setUsername(env.getProperty("spring.datasource.username"));
-        dataSource.setPassword(env.getProperty("spring.datasource.password"));
+        dataSource.setUsername("nostra");
+        dataSource.setPassword("nostra");
 
         return dataSource;
     }
