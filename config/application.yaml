@@ -6,7 +6,7 @@ server:
 
 spring:
   datasource:
-
+    driver-class-name : org.postgresql.Driver
     initialization-mode : always
     initialize : true
     url : jdbc:postgresql://demoDb:5432/nostra
