@@ -21,9 +21,9 @@ public class DbConfig {
 
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
-        dataSource.setUrl(System.getenv("MIDDLE_URL") !=null ? System.getenv("MIDDLE_URL") : env.getProperty("spring.datasource.url"));
-        dataSource.setUsername(System.getenv("MIDDLE_USERNAME") != null ? System.getenv("MIDDLE_USERNAME") : env.getProperty("spring.datasource.username"));
-        dataSource.setPassword(System.getenv("MIDDLE_PASSWORD") != null ? System.getenv("MIDDLE_PASSWORD") : env.getProperty("spring.datasource.password"));
+        dataSource.setUrl(System.getenv("DB_URL") !=null ? System.getenv("DB_URL") : env.getProperty("spring.datasource.url"));
+        dataSource.setUsername(System.getenv("DB_USERNAME") != null ? System.getenv("DB_USERNAME") : env.getProperty("spring.datasource.username"));
+        dataSource.setPassword(System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : env.getProperty("spring.datasource.password"));
 
         return dataSource;
     }
