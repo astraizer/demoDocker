@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/drink")
+@RequestMapping(value = "/api/drink")
 @Slf4j
 public class DrinkController {
 
