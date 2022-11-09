@@ -48,7 +48,7 @@ public class DrinkServiceImpl implements DrinkService {
         List<Drink> drinks = drinkRepository.findAll();
         List<DrinkDTO> dtos = new ArrayList<>();
         drinks.forEach(drink -> {
-            DrinkDTO dto = new DrinkDTO(drink.getId(), drink.getName(), drink.getPrice());
+            DrinkDTO dto = new DrinkDTO(drink.getId(),"1"+ drink.getName(), drink.getPrice());
             dtos.add(dto);
         });
         return dtos;
