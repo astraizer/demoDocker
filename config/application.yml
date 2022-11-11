@@ -1,5 +1,7 @@
 logging:
   config: config/logback.xml
+    file:
+      path : logs
 
 server:
   port: 8001
