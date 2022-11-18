@@ -1,12 +1,5 @@
 version: "3.9"
 services:
-  apps:
-    container_name: appsDemo
-    build: .
-    ports:
-    - "8080:8080"
-    depends_on:
-      - dbDemo
   dbDemo:
     container_name: dbDemo
     image: postgres
@@ -18,3 +11,10 @@ services:
       POSTGRES_PASSWORD: nostra
       POSTGRES_USERNAME: nostra
       POSTGRES_DATABASE: nostra
+  apps:
+    container_name: appsDemo
+    build: .
+    ports:
+    - "8080:8080"
+    depends_on:
+      - dbDemo
