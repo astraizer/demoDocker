@@ -6,7 +6,7 @@ services:
     ports:
     - "8080:8080"
     depends_on:
-      - db
+      - dbDemo
   dbDemo:
     container_name: dbDemo
     image: postgres
