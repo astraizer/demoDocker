@@ -20,9 +20,9 @@ public class DbConfig {
     @Primary
     @Bean(name = "dbDataSource")
     public DataSource dbDataSource() {
-        log.info("env: {} ",env.getProperty("DB_URL"));
+        log.info("env: {} ",env.getProperty("spring.datasource.url"));
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(System.getenv("DRIVER_CLASS_NAME") != null ? System.getenv("DRIVER_CLASS_NAME") :env.getProperty("spring.datasource.driver-class-name") );
+        dataSource.setDriverClassName(System.getenv("DRIVER_CLASS_NAME") != null ? System.getenv("DRIVER_CLASS_NAME") :env.getProperty("spring.datasource.org.postgresql.Driver") );
         dataSource.setUrl(System.getenv("DB_URL") !=null ? System.getenv("DB_URL") : env.getProperty("spring.datasource.url"));
         dataSource.setUsername(System.getenv("DB_USERNAME") != null ? System.getenv("DB_USERNAME") : env.getProperty("spring.datasource.username"));
         dataSource.setPassword(System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : env.getProperty("spring.datasource.password"));
