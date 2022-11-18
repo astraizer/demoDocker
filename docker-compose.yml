@@ -10,8 +10,6 @@ services:
   dbDemo:
     container_name: dbDemo
     image: postgres
-    ports:
-      - "5432:5432"
     volumes:
       - "/home/nostra/postgre-data:/var/lib/postgresql/data"
     environment:
