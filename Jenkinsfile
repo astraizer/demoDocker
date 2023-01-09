@@ -18,6 +18,7 @@ pipeline {
 						def remote = [:]
 						remote.name='test'
 						remote.host='168.138.214.199'
+						remote.user='ocp'
 						remote.identityFile=keyfile
 						remote.allowAnyHosts=true
 						sshCommand remote: remote, command: "ls -lrt"
