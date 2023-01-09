@@ -4,7 +4,7 @@ services:
     image: app-images
     build: .
     volumes:
-      - "app_volume:/logs"
+      - "app_volumes:/logs"
   apps2:
     image: app-images
     build: .
