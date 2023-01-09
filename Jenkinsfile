@@ -1,7 +1,6 @@
 pipeline {
 	agent any;
 	tools {
-	        docker 'latest'
 		maven 'maven 3.8.7' 
     	}
 	stages{
