@@ -11,14 +11,20 @@ pipeline {
 				}
 			}
 		}*/
+		
 		stage("deploy"){
 			steps{
-				withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'keyFile', passphraseVariable: 'pass', usernameVariable: 'ocp')]) {
-					def remote = [name:'homeTest',host:'168.138.214.199',user:'ocp',identityFile:keyFile,allowAnyHosts:true]
-					sshCommand remote: remote, command: "ls -lrt"
-					sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+				script{
+					withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'keyFile', passphraseVariable: 'pass', usernameVariable: 'ocp')]) {
+						def remote = [:]
+						remote.name:'test'
+						remote.host:'168.138.214.199'
+						remote.identityFile:keyfile
+						remote.allowAnyHosts:true
+						sshCommand remote: remote, command: "ls -lrt"
+						sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+					}
 				}
-
 			}
 		}
 	}
