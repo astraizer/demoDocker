@@ -9,12 +9,12 @@ services:
     image: app-images
     build: .
     volumes:
-      - "app_volume:/logs"
+      - "app_volumes:/logs"
   dbDemo:
     container_name: dbDemo
     image: postgres
     volumes:
-      - "db_volume:/var/lib/postgresql/data"
+      - "db_volumes:/var/lib/postgresql/data"
     environment:
       POSTGRES_PASSWORD: nostra
       POSTGRES_USERNAME: nostra
@@ -31,12 +31,12 @@ services:
       - apps
 
 volumes:
-  app_volume:
+  app_volumes:
     driver_opts:
       type: none
       o : bind
       device: ./data
-  db_volume:
+  db_volumes:
     driver_opts:
       type: none
       o: bind
