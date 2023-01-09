@@ -14,8 +14,7 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					withCredentials([sshUserPrivateKey(credentialsId: 'jenkins', keyFileVariable: 'keyFile', passphraseVariable: 'asdf', usernameVariable: 'ocp')]) {
-    						
+					withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'keyFile', usernameVariable: 'ocp')]) {
 						def remote = [name:'homeTest',host:'168.138.214.199',user:'ocp',identityFile:keyFile,allowAnyHosts:true]
 						sshCommand remote: remote, command: "ls -lrt"
       						sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
