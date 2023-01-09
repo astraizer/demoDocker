@@ -6,10 +6,16 @@ pipeline {
 	stages{
 		stage("build"){
 			steps {
-		                sh """
-                    		mvn clean package -DskipTests=true
-				docker compose up --build
-                    		"""
+				script{
+		                	sh 'mvn clean package -DskipTests=true'
+				}
+			}
+		}
+		stage("deploy"){
+			steps{
+				script{
+					sh 'docker compose up --build'
+				}
 			}
 		}
 	}
