@@ -4,13 +4,13 @@ pipeline {
  		maven 'maven 3.8.7' 
      	}
 	stages{
-		stage("build"){
+		/*stage("build"){
 			steps {
 				script{
 		                	sh 'mvn clean package -DskipTests=true'
 				}
 			}
-		}
+		}*/
 		stage("deploy"){
 			steps{
 				script{
