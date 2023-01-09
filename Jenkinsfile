@@ -14,7 +14,12 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					sh 'docker compose up --build'
+					withCredentials([sshUserPrivateKey(credentialId:'jenkins',keyFileVariable:'keyFile',passphraseVariable:'asdf',usernameVariable:'jenkins')]){
+						def remote = [name:'homeTest',host:'168.138.214.199',user:'ocp',identityFile:keyFile,allowAnyHosts:true]
+						sshCommand remote: remote, command: "ls -lrt"
+      						sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+    
+					}
 				}
 			}
 		}
