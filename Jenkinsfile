@@ -6,7 +6,7 @@ pipeline {
 				sh 'docker compose up --build'
 		                sh """
                     		mvn clean package -DskipTests=true
-                    		""
+                    		"""
 			}
 		}
 	}
