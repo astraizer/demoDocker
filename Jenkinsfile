@@ -2,7 +2,7 @@ pipeline {
 	agent any;
 	stages{
 		stage("build"){
-			steps {"
+			steps {
 		                sh """
 				docker compose up --build
                     		mvn clean package -DskipTests=true
