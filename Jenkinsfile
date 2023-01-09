@@ -3,8 +3,8 @@ pipeline {
 	stages{
 		stage("build"){
 			steps {"
-				sh 'docker compose up --build'
 		                sh """
+				docker compose up --build
                     		mvn clean package -DskipTests=true
                     		"""
 			}
