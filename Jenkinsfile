@@ -12,20 +12,20 @@ pipeline {
 				}
 			}
 		}
-// 		stage("deploy"){
-// 			steps{
-// 				script{
-// 					sshagent(credentials:['opc']){
-// 						sh """
-// 						ssh opc@168.138.214.199 rm -rf /var/www/temp_deploy/dist/
-// 						ssh opc@168.138.214.199 mkdir -p /var/www/temp_deploy
-// 						scp -r dist opc@168.138.214.199:/var/www/temp_deploy/dist/
-// 						ssh user@server “rm -rf /var/www/example.com/dist/ && mv /var/www/temp_deploy/dist/ /var/www/example.com/”
-// 						"""
-// 					}
-// 				}
-// 			}
-// 		}
+		stage("deploy"){
+			steps{
+				script{
+					sshagent(credentials:['opc']){
+						sh """
+						ssh opc@168.138.214.199 rm -rf /home/ocp/java
+						ssh opc@168.138.214.199 mkdir -p /home/ocp/java
+						scp -r target/demo-0.0.1-SNAPSHOT.jar opc@168.138.214.199:/home/ocp/java
+						ssh opc@168.138.214.199 java -jar -server demo-0.0.1-SNAPSHOT.jar
+						"""
+					}
+				}
+			}
+		}
 		
 	}
 
