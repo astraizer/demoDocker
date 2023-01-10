@@ -14,8 +14,8 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					sshagent(credentials:['ocp']){
-						sh 'ssh  ocp@168.138.214.199 uptime "whoami"'
+					sshagent(credentials:['opc']){
+						sh 'ssh  opc@168.138.214.199 uptime "whoami"'
 					}
 				}
 			}
