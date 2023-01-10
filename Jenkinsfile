@@ -15,7 +15,7 @@ pipeline {
 			steps{
 				script{
 					sshagent(credentials:['ocp']){
-						sh 'ssh  -o StrictHostKeyChecking=no  ocp@168.138.214.199 uptime "whoami"'
+						sh 'ssh  ocp@168.138.214.199 uptime "whoami"'
 					}
 				}
 			}
