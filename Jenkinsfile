@@ -16,8 +16,8 @@ pipeline {
 			steps{
 				script{
 					sshagent(credentials:['opc']){
-						sh ' opc@168.138.214.199 pwd'
-						sh ' opc@168.138.214.199 ls -la'
+						sh 'ssh opc@168.138.214.199 pwd'
+						sh 'ssh opc@168.138.214.199 ls -la'
 // 						sh """
 // 						ssh opc@168.138.214.199 rm -rf ./
 // 						ssh opc@168.138.214.199 mkdir -p /
