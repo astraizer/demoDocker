@@ -16,14 +16,12 @@ pipeline {
 			steps{
 				script{
 					sshagent(credentials:['opc']){
-						sh 'ssh opc@168.138.214.199 pwd'
-						sh 'ssh opc@168.138.214.199 ls -la'
-// 						sh """
-// 						ssh opc@168.138.214.199 rm -rf ./
-// 						ssh opc@168.138.214.199 mkdir -p /
-// 						scp -r target/demo-0.0.1-SNAPSHOT.jar opc@168.138.214.199:/home/ocp/java
-// 						ssh opc@168.138.214.199 java -jar -server demo-0.0.1-SNAPSHOT.jar
-// 						"""
+						sh """
+						ssh opc@168.138.214.199 rm -rf code
+						ssh opc@168.138.214.199 mkdir -p code
+						scp -r target/demo-0.0.1-SNAPSHOT.jar opc@168.138.214.199:code
+						ssh opc@168.138.214.199 java -jar -server code/demo-0.0.1-SNAPSHOT.jar
+ 						"""
 					}
 				}
 			}
