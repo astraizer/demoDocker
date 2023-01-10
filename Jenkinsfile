@@ -14,8 +14,8 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					sshagent(credentials:['Login_Cloud_Server']){
-						sh 'ssh  -o StrictHostKeyChecking=no  root@135.181.203.3 uptime "whoami"'
+					sshagent(credentials:['ocp']){
+						sh 'ssh  -o StrictHostKeyChecking=no  ocp@168.138.214.199 uptime "whoami"'
 					}
 				}
 			}
