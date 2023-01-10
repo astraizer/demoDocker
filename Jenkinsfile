@@ -14,7 +14,7 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'identity', passphraseVariable: 'pass', usernameVariable: 'ocp')]) {
+					withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'identity', passphraseVariable: '{AQAAABAAAAAQqDlghMkgL1bo7Z2B44CSqG3O9ygbBdjipXdJDnHosgo=}', usernameVariable: 'ocp')]) {
 						def remote = [:]
 						remote.name='test'
 						remote.host='168.138.214.199'
