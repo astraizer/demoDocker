@@ -14,15 +14,8 @@ pipeline {
 		stage("deploy"){
 			steps{
 				script{
-					withCredentials([sshUserPrivateKey(credentialsId: 'ocp', keyFileVariable: 'keyfile',usernameVariable: 'ocp')]) {
-						def remote = [:]
-						remote.name='test'
-						remote.host='168.138.214.199'
-						remote.user='ocp'
-						remote.identityFile=keyfile
-						remote.allowAnyHosts=true
-						sshCommand remote: remote, command: "ls -lrt"
-						sshCommand remote: remote, command: "for i in {1..5}; do echo -n \"Loop \$i \"; date ; sleep 1; done"
+					sshagent(credentials:['Login_Cloud_Server']){
+						sh 'ssh  -o StrictHostKeyChecking=no  root@135.181.203.3 uptime "whoami"'
 					}
 				}
 			}
